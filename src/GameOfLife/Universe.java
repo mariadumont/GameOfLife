@@ -7,7 +7,7 @@ package GameOfLife;
 
 /**
  *
-* @author alu20482156n
+ * @author alu20482156n
  */
 public class Universe {
 
@@ -24,7 +24,7 @@ public class Universe {
                 newMatrix[i][j] = false;
             }
         }
-        
+
     }
 
     public boolean[][] getMatrix() {
@@ -100,6 +100,10 @@ public class Universe {
             }
         }
         return counter;
+    }
+
+    public void createCell(int row, int col) {
+        matrix[row][col] = true;
     }
 
 }
