@@ -15,7 +15,7 @@ public class Universe {
     private boolean[][] newMatrix;
 
     public Universe() {
-        SingletonUniverse cs = SingletonUniverse.getInstance();
+        ConfigSingleton cs = ConfigSingleton.getInstance();
         matrix = new boolean[cs.getNumRows()][cs.getNumCols()];
         newMatrix = new boolean[cs.getNumRows()][cs.getNumCols()];
         for (int i = 0; i < cs.getNumRows(); i++) {
@@ -31,12 +31,9 @@ public class Universe {
         return matrix;
     }
 
-    public void setMatrix(boolean[][] matrix) {
-        this.matrix = matrix;
-    }
 
     public void tick() {
-        SingletonUniverse cs = SingletonUniverse.getInstance();
+        ConfigSingleton cs = ConfigSingleton.getInstance();
         int numNeighbours;
         for (int i = 0; i < cs.getNumRows(); i++) {
             for (int j = 0; j < cs.getNumCols(); j++) {
@@ -48,7 +45,7 @@ public class Universe {
                     if (!matrix[i][j] && numNeighbours == 3) {
                         newMatrix[i][j] = true;
                     }
-                }
+                } 
             }
         }
         boolean[][] temp = matrix;
@@ -57,7 +54,7 @@ public class Universe {
     }
 
     public int numNeighbours(int row, int col) {
-        SingletonUniverse cs = SingletonUniverse.getInstance();
+        ConfigSingleton cs = ConfigSingleton.getInstance();
         int counter = 0;
         if (row - 1 >= 0) {
             if (col - 1 >= 0) {

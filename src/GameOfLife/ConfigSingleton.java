@@ -9,23 +9,23 @@ package GameOfLife;
  *
 * @author alu20482156n
  */
-public class SingletonUniverse {
+public class ConfigSingleton {
 
-    private static SingletonUniverse instance;
+    private static ConfigSingleton instance;
 
     private int numCols;
     private int numRows;
     private int deltaTime;
 
-    public SingletonUniverse() {
+    public ConfigSingleton() {
         numCols = 50;
         numRows = 50;
         deltaTime = 500;
     }
 
-    public static SingletonUniverse getInstance() {
+    public static ConfigSingleton getInstance() {
         if (instance == null) {
-            instance = new SingletonUniverse();
+            instance = new ConfigSingleton();
         }
         return instance;
     }

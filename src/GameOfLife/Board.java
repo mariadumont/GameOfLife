@@ -26,7 +26,7 @@ public class Board extends javax.swing.JPanel implements ActionListener {
     }
     
      private void initMyComponents() {
-        SingletonUniverse cs = SingletonUniverse.getInstance();
+        ConfigSingleton cs = ConfigSingleton.getInstance();
         universe = new Universe();
         timer = new Timer(cs.getDeltaTime(), this);
         
@@ -81,7 +81,7 @@ public class Board extends javax.swing.JPanel implements ActionListener {
     }
 
     private void paintUniverse(Graphics g) {
-        SingletonUniverse cs = SingletonUniverse.getInstance();
+        ConfigSingleton cs = ConfigSingleton.getInstance();
         boolean[][] matrix = universe.getMatrix();
         for (int i = 0; i < cs.getNumRows(); i++) {
             for (int j = 0; j < cs.getNumCols(); j++) {
@@ -91,14 +91,14 @@ public class Board extends javax.swing.JPanel implements ActionListener {
     }
 
     private int squareWidth() {
-        return getWidth() / SingletonUniverse.getInstance().getNumCols();
+        return getWidth() / ConfigSingleton.getInstance().getNumCols();
     }
 
     private int squareHeight() {
-        return getHeight() / SingletonUniverse.getInstance().getNumRows();
+        return getHeight() / ConfigSingleton.getInstance().getNumRows();
     }
 
-    public void starGame() {
+    public void startGame() {
         timer.start();
     }
 

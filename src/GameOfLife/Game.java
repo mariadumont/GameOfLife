@@ -11,11 +11,9 @@ package GameOfLife;
  */
 public class Game extends javax.swing.JFrame {
 
-    Board board;
 
     public Game() {
         initComponents();
-        board = new Board();
     }
 
     /**
@@ -102,7 +100,8 @@ public class Game extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
 
-        jButtonStart.setText("Star");
+        jButtonStart.setText("Start");
+        jButtonStart.setActionCommand("Start");
         jButtonStart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonStartActionPerformed(evt);
@@ -129,7 +128,7 @@ public class Game extends javax.swing.JFrame {
                 .addComponent(jButtonStart)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonStop)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(231, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,13 +167,13 @@ public class Game extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStartActionPerformed
-        board.starGame();
+        board1.startGame();
 
     }//GEN-LAST:event_jButtonStartActionPerformed
 
     private void jButtonStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStopActionPerformed
 
-        board.stopGame();
+        board1.stopGame();
     }//GEN-LAST:event_jButtonStopActionPerformed
 
     

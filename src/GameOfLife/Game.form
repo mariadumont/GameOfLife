@@ -140,7 +140,7 @@
                   <Component id="jButtonStart" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButtonStop" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="237" max="32767" attributes="0"/>
+                  <EmptySpace pref="231" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -171,7 +171,8 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButtonStart">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Star"/>
+            <Property name="text" type="java.lang.String" value="Start"/>
+            <Property name="actionCommand" type="java.lang.String" value="Start"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonStartActionPerformed"/>
